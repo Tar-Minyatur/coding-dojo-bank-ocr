@@ -16,10 +16,9 @@ class CharacterExtractor {
     }
   }
 
-  private def splitLinesIntoMultilineChars(tokenizedLines: Array[List[String]]) = {
+  private def splitLinesIntoMultilineChars(tokenizedLines: Array[List[String]]) =
     List.range(0, tokenizedLines.head.length)
       .map(index => tokenizedLines(0)(index) + tokenizedLines(1)(index) + tokenizedLines(2)(index))
-  }
 
   private def makeLineSafeToTokenize(line: String): String =
     if (line.length % 3 > 0)
