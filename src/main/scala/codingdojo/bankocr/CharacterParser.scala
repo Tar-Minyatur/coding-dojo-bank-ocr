@@ -52,8 +52,7 @@ class CharacterParser {
     "|_|" +
     " _|"
 
-  def parseString(input: String): Option[Char] = {
-
+  def parseString(input: String): Option[Char] =
     input match {
       case `char0` => Option('0')
       case `char1` => Option('1')
@@ -67,7 +66,5 @@ class CharacterParser {
       case `char9` => Option('9')
       case _ => None
     }
-
-  }
 
 }
