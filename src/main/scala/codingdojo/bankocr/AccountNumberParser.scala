@@ -8,7 +8,7 @@ class AccountNumberParser(charExtractor: CharacterExtractor, charParser: Charact
     if (lines.length < 3)
       Seq()
     else
-      List.range(0, lines.length, 3).map(index =>
+      List.range(0, lines.length, 4).map(index =>
         charExtractor.extractCharsFromString(concatThreeLinesFromIndex(lines, index)) match {
           case None => ""
           case Some(characters) => convertCharactersToNumber(characters)
