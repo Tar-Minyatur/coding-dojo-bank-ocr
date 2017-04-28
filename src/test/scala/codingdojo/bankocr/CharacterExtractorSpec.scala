@@ -42,6 +42,10 @@ class CharacterExtractorSpec extends WordSpec with Matchers {
         " _|\n")
       result shouldBe 'defined
       result.get.length shouldBe 1
+      result.get.head shouldBe
+        " _ " +
+        "|_ " +
+        " _|"
 
     }
 
