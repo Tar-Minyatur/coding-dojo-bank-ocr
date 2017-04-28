@@ -20,7 +20,7 @@ class AccountNumberParser(charExtractor: CharacterExtractor, charParser: Charact
 
   private def convertCharactersToNumber(characters: Seq[String]) = {
     characters.map(charParser.parseString(_) match {
-      case None => ' '
+      case None => '?'
       case Some(char) => char
     }).foldLeft("")((b, a) => b + a)
   }
